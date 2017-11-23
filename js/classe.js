@@ -1,7 +1,9 @@
 /**
  * Created by Yannouche on 19/11/2017.
  */
-var Classe = function(name){
+'use strict';
+
+function Classe(name){
     this.attributs = [];
     this.methodes = [];
     this.nom = name;
@@ -134,4 +136,109 @@ var Classe = function(name){
     };
 
     //gestion des attributs
-};
+    this.addAttribut = function(attribut){
+        if(!(attribut instanceof Attribut)){
+
+        }
+        else{
+            this.attributs.push(attribut);
+        }
+    };
+
+    this.removeAttribut = function(attribut){
+        if(typeof attribut !== 'string'){
+
+        }
+        else{
+            var i = 0;
+            var found = false;
+            var nbAttributs = this.attributs.length;
+
+            while(i < nbAttributs && found === false){
+                if(this.attributs[i].getName() === attribut){
+                    found = i;
+                }
+                i++;
+            }
+
+            if(found ===false){
+            }
+            else{
+                this.attributs.splice(found, 1);
+            }
+        }
+    };
+
+    this.clearAttributs = function(){
+        this.attributs = [];
+    };
+
+    // gestion des méthodes
+    this.addMethode = function(methode){
+        if(!(methode instanceof Methode)){
+
+        }
+        else{
+            this.methodes.push(methode);
+        }
+    };
+
+    this.removeMethode = function(methode){
+        if(typeof methode !== 'string'){
+
+        }
+        else{
+            var i = 0;
+            var found = false;
+            var nbItems = this.methodezs.length;
+
+            while (i < nbItems && found === false){
+                if(this.methodes[i].getName() === methode){
+                    found = i;
+                }
+
+                i++;
+            }
+
+            if( found === false){
+
+            }
+            else{
+                this.methodes.splice(found, 1);
+            }
+        }
+    };
+
+    this.createDomNode = function(){
+        var classeDiv = document.createElement('div');
+        classeDiv.setAttribute('class', 'classe');
+
+        //div du nom
+        var nameDiv = document.createElement('div');
+        nameDiv.setAttribute('class', 'className');
+        nameDiv.textContent = this.getNom();
+
+        //div des attributs
+        var attributesDiv = document.createElement('div');
+        attributesDiv.setAttribute('class', 'attributes');
+
+        this.getAttributs().forEach(function(attr){
+            attributesDiv.appendChild(attr.createDomNode());
+        });
+
+        //div des méthodes
+        var methodsDiv = document.createElement('div');
+        methodsDiv.setAttribute('class', 'methods');
+
+        this.getMethodes().forEach(function(m){
+            methodsDiv.appendChild(m.createDomNode());
+        });
+
+        //ajout des éléments a la classe
+        classeDiv.appendChild(nameDiv);
+        classeDiv.appendChild(attributesDiv);
+        classeDiv.appendChild(methodsDiv);
+
+        return classeDiv;
+    }
+}

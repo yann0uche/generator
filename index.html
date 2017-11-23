@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur PHP</title>
+    <script src="js/application.js"></script>
+    <script src="js/argument.js"></script>
+    <script src="js/attribut.js"></script>
+    <script src="js/classe.js"></script>
+    <script src="js/methode.js"></script>
+    <script src="js/namespace.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script type="text/javascript">
+        var app = new Application();
+        var testClass = new Classe('toto');
+        var testNamespace = new Namespace('Name\\Space');
+        testClass.addAttribut(new Attribut('privé', 'int', 'private'));
+        testClass.addAttribut(new Attribut('protégé', 'boolean', 'protected'));
+        testClass.addAttribut(new Attribut('public', 'string', 'public'));
+        testNamespace.addClass(testClass);
+        app.addNamespace(testNamespace);
+        app.display();
+    </script>
+</body>
+</html>

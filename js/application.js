@@ -4,7 +4,7 @@
 
 'use strict';
 
-var Application = function(){
+function Application(){
     //attributs
     this.name = '';
     this.namespaces = [];
@@ -68,7 +68,16 @@ var Application = function(){
 
     //permet de créer une application avec un namespace par défaut
     this.run = function(){
-        var defaultNamespace = new Namespace('default');
-        this.addNamespace(defaultNamespace);
-    }
-};
+        // var defaultNamespace = new Namespace('default');
+        // this.addNamespace(defaultNamespace);
+        // this.display();
+    };
+
+    this.display = function(){
+        var app = document.getElementById('app');
+
+        this.getNamespaces().forEach(function(namespace){
+            app.appendChild(namespace.createDomNode());
+        });
+    };
+}

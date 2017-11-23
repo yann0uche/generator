@@ -4,12 +4,16 @@
 
 'use strict';
 
-var Namespace = function(name){
+function Namespace(name){
     this.name = name;
     this.classes = [];
 
     this.getName = function(){
         return this.name;
+    };
+
+    this.getClasses = function(){
+        return this.classes;
     };
 
     this.setName = function(name){
@@ -70,5 +74,17 @@ var Namespace = function(name){
             classe.setNamespace(this);
             this.addClass(classe);
         }
-    }
-};
+    };
+
+    this.createDomNode = function(){
+        //div du namespace
+        var namespaceDiv = document.createElement('div');
+        namespaceDiv.setAttribute('class', 'namespace');
+
+        this.getClasses().forEach(function(classe){
+            namespaceDiv.appendChild(classe.createDomNode());
+        });
+
+        return namespaceDiv;
+    };
+}
