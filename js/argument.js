@@ -3,33 +3,33 @@
  */
 'use strict';
 
-function Argument(nom, type){
+function Argument(nom, type) {
     this.nom = nom;
     this.type = type;
 
-    this.getNom = function(){
+    this.getNom = function () {
         return this.nom;
     };
 
-    this.getType = function(){
+    this.getType = function () {
         return this.type;
     };
 
-    this.setNom = function(nom){
-        if(typeof nom !== 'string'){
+    this.setNom = function (nom) {
+        if (typeof nom !== 'string') {
 
         }
-        else{
+        else {
             this.nom = nom;
         }
     };
 
-    this.setType = function(type){
-        if(typeof type !== 'string'){
+    this.setType = function (type) {
+        if (typeof type !== 'string') {
 
         }
-        else{
+        else {
             this.type = type;
         }
-    };
-;
+    }
+}
