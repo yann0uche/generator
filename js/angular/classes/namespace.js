@@ -70,21 +70,7 @@ function Namespace(name){
         }
         else{
             var classe = new Classe(name);
-
-            classe.setNamespace(this);
             this.addClass(classe);
         }
-    };
-
-    this.createDomNode = function(){
-        //div du namespace
-        var namespaceDiv = document.createElement('div');
-        namespaceDiv.setAttribute('class', 'namespace');
-
-        this.getClasses().forEach(function(classe){
-            namespaceDiv.appendChild(classe.createDomNode());
-        });
-
-        return namespaceDiv;
     };
 }

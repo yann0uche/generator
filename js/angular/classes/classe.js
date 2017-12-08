@@ -173,6 +173,17 @@ function Classe(name){
         this.attributs = [];
     };
 
+	this.setAttributes = function(attributesList){
+		if(!(attributesList instanceof Array)){
+			//todo gerer erreur
+		}
+		else{
+			for(var i = 0; i < attributesList.length; i++){
+				this.addAttribut(attributesList[i]);
+			}
+		}
+	};
+
     // gestion des méthodes
     this.addMethode = function(methode){
         if(!(methode instanceof Methode)){
@@ -190,7 +201,7 @@ function Classe(name){
         else{
             var i = 0;
             var found = false;
-            var nbItems = this.methodezs.length;
+            var nbItems = this.methodes.length;
 
             while (i < nbItems && found === false){
                 if(this.methodes[i].getName() === methode){
@@ -209,36 +220,61 @@ function Classe(name){
         }
     };
 
-    this.createDomNode = function(){
-        var classeDiv = document.createElement('div');
-        classeDiv.setAttribute('class', 'classe');
+    this.setMethodes = function(methodesList){
+        if(!(methodesList instanceof Array)){
+            //todo gerer erreur
+        }
+        else{
+            for(var i = 0; i < methodesList.length; i++){
+                this.addMethode(methodesList[i]);
+            }
+        }
+    };
 
-        //div du nom
-        var nameDiv = document.createElement('div');
-        nameDiv.setAttribute('class', 'className');
-        nameDiv.textContent = this.getNom();
+    // gestion des interfaces
+	this.addInterface = function(interfasse){
+		if(!(interfasse instanceof Methode)){
 
-        //div des attributs
-        var attributesDiv = document.createElement('div');
-        attributesDiv.setAttribute('class', 'attributes');
+		}
+		else{
+			this.methodes.push(interfasse);
+		}
+	};
 
-        this.getAttributs().forEach(function(attr){
-            attributesDiv.appendChild(attr.createDomNode());
-        });
+	this.removeInterface = function(interfasse){
+		if(typeof interfasse !== 'string'){
 
-        //div des méthodes
-        var methodsDiv = document.createElement('div');
-        methodsDiv.setAttribute('class', 'methods');
+		}
+		else{
+			var i = 0;
+			var found = false;
+			var nbItems = this.interfaces.length;
 
-        this.getMethodes().forEach(function(m){
-            methodsDiv.appendChild(m.createDomNode());
-        });
+			while (i < nbItems && found === false){
+				if(this.interfaces[i].getName() === interfasse){
+					found = i;
+				}
 
-        //ajout des éléments a la classe
-        classeDiv.appendChild(nameDiv);
-        classeDiv.appendChild(attributesDiv);
-        classeDiv.appendChild(methodsDiv);
+				i++;
+			}
 
-        return classeDiv;
-    }
+			if( found === false){
+
+			}
+			else{
+				this.interfaces.splice(found, 1);
+			}
+		}
+	};
+
+	this.setInterfaces = function(interfacesList){
+		if(!(interfacesList instanceof Array)){
+			//todo gerer erreur
+		}
+		else{
+			for(var i = 0; i < interfacesList.length; i++){
+				this.addInterface(interfacesList[i]);
+			}
+		}
+	};
 }

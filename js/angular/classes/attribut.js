@@ -48,12 +48,4 @@ function Attribut(nom, type, visibilite){
             this.visibilite = visibilite;
         }
     };
-
-    this.createDomNode = function(){
-        var attributeSpan = document.createElement('span');
-        attributeSpan.setAttribute('class', 'attribut ' + this.getVisibilite());
-        attributeSpan.textContent = this.getNom() + ' : ' + this.getType();
-
-        return attributeSpan;
-    }
 }

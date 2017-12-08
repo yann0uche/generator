@@ -3,11 +3,13 @@
  */
 'use strict';
 
-function Methode(nom, typeRetour, visibilite, args){
+function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
     this.nom = nom;
-    this.visibilite = visibilite;
-    this.typeRetour = typeRetour;
+	this.typeRetour = typeRetour || null;
+	this.visibilite = visibilite || null;
     this.args = args || [];
+    this.isAbstraite = isAbstraite || false;
+    this.isFinale = isFinale || false;
 
     this.getNom = function(){
         return this.nom;
@@ -24,6 +26,32 @@ function Methode(nom, typeRetour, visibilite, args){
     this.getArgs = function(){
         return this.args;
     };
+
+    this.getIsAbstraite = function(){
+        return this.isAbstraite;
+    };
+
+    this.getIsFinale = function(){
+        return this.isFinale;
+    };
+
+	this.setIsAbstraite = function(isAbstraite){
+		if(typeof isAbstraite !== 'boolean'){
+			//todo gestion erreur
+		}
+		else{
+			this.isAbstraite = isAbstraite;
+		}
+	};
+
+	this.setIsFinale = function(isFinale){
+		if(typeof isFinale !== 'boolean'){
+			//todo gestion erreur
+		}
+		else{
+			this.isFinale = isFinale;
+		}
+	};
 
     this.setNom = function(nom){
         if(typeof nom !== 'string'){
@@ -105,20 +133,5 @@ function Methode(nom, typeRetour, visibilite, args){
 
     this.clearArgs = function(){
         this.args = [];
-    };
-
-    this.createDomNode = function(){
-        var methodSpan = document.createElement('span');
-        methodSpan.setAttribute('class', 'methode ' + this.getVisibilite());
-
-        var argsList = [];
-
-         this.getArgs().forEach(function(arg){
-            argsList.push(arg.getNom() + ' : ' + arg.getType());
-        });
-
-        methodSpan.textContent  = this.getNom() + '(' + argsList.join(', ') + '): ' . this.getTypeRetour();
-
-        return methodSpan;
     };
 }

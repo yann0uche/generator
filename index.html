@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Générateur PHP</title>
-    <script src="js/application.js"></script>
-    <script src="js/argument.js"></script>
-    <script src="js/attribut.js"></script>
-    <script src="js/classe.js"></script>
-    <script src="js/methode.js"></script>
-    <script src="js/namespace.js"></script>
-</head>
-<body>
-    <div id="app">
-
-    </div>
-    <script type="text/javascript">
-        var app = new Application();
-        var testClass = new Classe('toto');
-        var testNamespace = new Namespace('Name\\Space');
-        testClass.addAttribut(new Attribut('privé', 'int', 'private'));
-        testClass.addAttribut(new Attribut('protégé', 'boolean', 'protected'));
-        testClass.addAttribut(new Attribut('public', 'string', 'public'));
-        testNamespace.addClass(testClass);
-        app.addNamespace(testNamespace);
-        app.display();
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Générateur PHP</title>
+        <script src="js/angular/angular.min.1.6.6.js"></script>
+        <script src="js/angular/app.js"></script>
+        <!--    application     -->
+        <script src="js/angular/classes/application.js"></script>
+        <script src="js/angular/controller/application.js"></script>
+        <script src="js/angular/directive/application.js"></script>
+        <!--namespace-->
+        <script src="js/angular/classes/namespace.js"></script>
+        <script src="js/angular/controller/namespace.js"></script>
+        <script src="js/angular/directive/namespace.js"></script>
+        <!--    classe     -->
+        <script src="js/angular/classes/classe.js"></script>
+        <script src="js/angular/controller/classe.js"></script>
+        <script src="js/angular/directive/classe.js"></script>
+        <!--    interface     -->
+        <script src="js/angular/classes/interface.js"></script>
+        <script src="js/angular/controller/interface.js"></script>
+        <script src="js/angular/directive/interface.js"></script>
+        <!--    attribut     -->
+        <script src="js/angular/classes/attribut.js"></script>
+        <script src="js/angular/controller/attribut.js"></script>
+        <script src="js/angular/directive/attribut.js"></script>
+        <!--    methode     -->
+        <script src="js/angular/classes/methode.js"></script>
+        <script src="js/angular/controller/methode.js"></script>
+        <script src="js/angular/directive/methode.js"></script>
+        <!--    arguments     -->
+        <script src="js/angular/classes/argument.js"></script>
+        <script src="js/angular/controller/argument.js"></script>
+        <script src="js/angular/directive/argument.js"></script>
+    </head>
+    <body ng-app="generator">
+    <application></application>
+    </body>
 </html>
