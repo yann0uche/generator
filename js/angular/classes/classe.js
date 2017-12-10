@@ -6,17 +6,19 @@
 function Classe(name){
     this.attributs = [];
     this.methodes = [];
-    this.nom = name;
-    this.position = {
+	this.imports = [];
+	this.constantes = [];
+	this.interfaces = [];
+
+	this.nom = name;
+	this.position = {
         'x': 0,
         'y': 0
     };
-    this.abstraite = false;
-    this.finale = false;
-    this.parent = null;
-    this.imports = [];
+	this.abstraite = false;
+	this.finale = false;
+	this.parent = null;
     this.commentaire = '';
-    this.namespace = null;
 
     this.getAttributs = function(){
         return this.attributs;
@@ -26,7 +28,7 @@ function Classe(name){
         return this.methodes;
     };
 
-    this.getNom = function(){
+    this.getName = function(){
         return this.nom;
     };
 
@@ -118,7 +120,7 @@ function Classe(name){
 
         }
         else{
-            this.imports.push(classe.getNamespace() + '\\' + classe.getNom());
+            this.imports.push(classe.getNamespace() + '\\' + classe.getName());
         }
     };
 
@@ -231,18 +233,18 @@ function Classe(name){
         }
     };
 
-    // gestion des interfaces
+	// gestion des interfaces
 	this.addInterface = function(interfasse){
-		if(!(interfasse instanceof Methode)){
+		if(!(interfasse instanceof Interface)){
 
 		}
 		else{
-			this.methodes.push(interfasse);
+			this.interfaces.push(interfasse);
 		}
 	};
 
 	this.removeInterface = function(interfasse){
-		if(typeof interfasse !== 'string'){
+		if(!(interfasse instanceof Interface)){
 
 		}
 		else{
@@ -251,7 +253,7 @@ function Classe(name){
 			var nbItems = this.interfaces.length;
 
 			while (i < nbItems && found === false){
-				if(this.interfaces[i].getName() === interfasse){
+				if(this.interfaces[i].getName() === interfasse.getName()){
 					found = i;
 				}
 
@@ -274,6 +276,53 @@ function Classe(name){
 		else{
 			for(var i = 0; i < interfacesList.length; i++){
 				this.addInterface(interfacesList[i]);
+			}
+		}
+	};
+
+	// gestion des interfaces
+	this.addConstante = function(constante){
+		if(!(constante instanceof Constante)){
+
+		}
+		else{
+			this.constantes.push(constante);
+		}
+	};
+
+	this.removeConstante = function(constante){
+		if(!(constante instanceof Constante)){
+
+		}
+		else{
+			var i = 0;
+			var found = false;
+			var nbItems = this.constantes.length;
+
+			while (i < nbItems && found === false){
+				if(this.constantes[i].getName() === constante.getName()){
+					found = i;
+				}
+
+				i++;
+			}
+
+			if( found === false){
+
+			}
+			else{
+				this.constantes.splice(found, 1);
+			}
+		}
+	};
+
+	this.setConstantes = function(constantesList){
+		if(!(constantesList instanceof Array)){
+			//todo gerer erreur
+		}
+		else{
+			for(var i = 0; i < constantesList.length; i++){
+				this.addConstante(constantesList[i]);
 			}
 		}
 	};

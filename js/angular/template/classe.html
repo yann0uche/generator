@@ -1,0 +1,6 @@
+<div class="classe">
+    <span class="name">{{ classe.getName() }}</span>
+    <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in classe.constantes"></constante>
+    <attribut ng-controller="AttributController" ng-init="init()" ng-repeat="attribut in classe.attributs"></attribut>
+    <!--<methode ng-controller="MethodeController" ng-init="init()" ng-repeat="methode in classe.methodes"></methode>-->
+</div>

@@ -10,7 +10,7 @@ function Attribut(nom, type, visibilite){
 
     //accesseurs
 
-    this.getNom = function(){
+    this.getName = function(){
         return this.nom;
     };
 

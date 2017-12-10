@@ -85,7 +85,7 @@ function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
         var allAreGood = true;
         var nbItems = args.length;
 
-        while(i < nbItems && allAreGood){
+        while(i < nbItems && allAreGood === true){
             allAreGood = args[i] instanceof Argument;
             i++;
         }
@@ -120,6 +120,8 @@ function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
                 if(args[i].getNom() === arg.getNom()){
                     found = i;
                 }
+
+                i++;
             }
 
             if(found === false){
