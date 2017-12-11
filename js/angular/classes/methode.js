@@ -3,16 +3,16 @@
  */
 'use strict';
 
-function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
-    this.nom = nom;
+function Methode(name, typeRetour, visibilite, args, isAbstraite, isFinale){
+    this.name = name;
 	this.typeRetour = typeRetour || null;
 	this.visibilite = visibilite || null;
     this.args = args || [];
     this.isAbstraite = isAbstraite || false;
     this.isFinale = isFinale || false;
 
-    this.getNom = function(){
-        return this.nom;
+    this.getName = function(){
+        return this.name;
     };
 
     this.getTypeRetour = function(){
@@ -53,12 +53,12 @@ function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
 		}
 	};
 
-    this.setNom = function(nom){
-        if(typeof nom !== 'string'){
+    this.setName = function(name){
+        if(typeof name !== 'string'){
 
         }
         else{
-            this.nom = nom;
+            this.name = name;
         }
     };
 
@@ -71,7 +71,7 @@ function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
         }
     };
 
-    this.setNom = function(visibilite){
+    this.setName = function(visibilite){
         if(!['private', 'protected', 'public'].includes(visibilite)){
 
         }
@@ -117,7 +117,7 @@ function Methode(nom, typeRetour, visibilite, args, isAbstraite, isFinale){
             var nbItems = this.args.length;
 
             while(i < nbItems && found === false){
-                if(args[i].getNom() === arg.getNom()){
+                if(args[i].getName() === arg.getName()){
                     found = i;
                 }
 

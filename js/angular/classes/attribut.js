@@ -3,15 +3,15 @@
  */
 'use strict';
 
-function Attribut(nom, type, visibilite){
-    this.nom = nom;
+function Attribut(name, type, visibilite){
+    this.name = name;
     this.type = type;
     this.visibilite = visibilite;
 
     //accesseurs
 
     this.getName = function(){
-        return this.nom;
+        return this.name;
     };
 
     this.getType = function(){
@@ -22,12 +22,12 @@ function Attribut(nom, type, visibilite){
         return this.visibilite;
     };
 
-    this.setNom = function(nom){
-        if(typeof nom !== 'string'){
+    this.setNom = function(name){
+        if(typeof name !== 'string'){
 
         }
         else{
-            this.nom = nom;
+            this.name = name;
         }
     };
 

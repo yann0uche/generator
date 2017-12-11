@@ -10,7 +10,6 @@ app.controller('ApplicationController', function($scope){
         //todo gestion ouverture diagramme depuis cookie (possible en JS?)
 
         //code de démo
-        debugger;
         var app = new Application('My super app');
         var namespace = new Namespace('My/Namespace');
         var classe = new Classe('ExampleClass');
@@ -23,17 +22,17 @@ app.controller('ApplicationController', function($scope){
                 new Attribut('publicAttribute', 'AnotherObject', 'public')
             ]
         );
-		//
-        // classe.setMethodes(
-        //     [
-        //         new Methode('privateMethod', 'void', 'private'),
-        //         new Methode('protectedMethod', 'bool', 'protected'),
-        //         new Methode('publicMethod', 'AnotherObject', 'public', [
-		//
-        //         ],
-        //         false, true)
-        //     ]
-        // );
+
+        classe.setMethodes(
+            [
+                new Methode('privateMethod', 'void', 'private'),
+                new Methode('protectedMethod', 'bool', 'protected'),
+                new Methode('publicMethod', 'AnotherObject', 'public', [
+
+                ],
+                false, true)
+            ]
+        );
 		//
         // classe.addInterface(new Interface('GeneratorInterface', [
         //     new Methode('load'),
