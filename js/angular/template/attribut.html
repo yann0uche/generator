@@ -1,6 +1,6 @@
 <div class="attribut">
     <span class="visibilite" ng-show="editionMode === false">{{ attribut.getVisibilite() }}</span>
-    <span class="name" ng-show="editionMode === false">{{ attribut.getName() }}</span>
+    <span class="name" ng-show="editionMode === false">{{ attribut.getName() }}</span>:
     <span class="type" ng-show="editionMode === false">{{ attribut.getType() }}</span>
     <button ng-click="edit()" ng-show="editionMode === false">&Eacute;diter</button>
     <select ng-model="attribut.visibilite" ng-show="editionMode === true" ng-options="item for item in ['private', 'protected', 'public']">

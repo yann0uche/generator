@@ -33,26 +33,25 @@ app.controller('ApplicationController', function($scope){
                 false, true)
             ]
         );
-		//
-        // classe.addInterface(new Interface('GeneratorInterface', [
-        //     new Methode('load'),
-        //     new Methode('generate', 'bool'),
-        //     new Methode('send', 'bool'),
-        //     new Methode('beforSend', 'bool'),
-        //     new Methode('afterSend', 'bool'),
-        //     new Methode('display')
-        // ]));
-		//
+
+        namespace.addInterface(new Interface('GeneratorInterface', [
+            new Methode('load'),
+            new Methode('generate', 'bool'),
+            new Methode('send', 'bool'),
+            new Methode('beforSend', 'bool'),
+            new Methode('afterSend', 'bool'),
+            new Methode('display')
+        ]));
+
         classe.addConstante(new Constante('constantValue', 12));
 		//
 		// parentClass.setAbstraite(true);
         // classe.setParent(parentClass);
-        namespace.addClass(classe);
+        namespace.addClasse(classe);
         app.addNamespace(namespace);
 
         $scope.application = app;
 
         //fin code de démo
-
     }
 });

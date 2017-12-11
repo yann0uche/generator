@@ -1,0 +1,62 @@
+.tools{
+    height: 150px;
+    width: 100%;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0px;
+}
+.application{
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    background: url("./images/grid.png") repeat ;
+    height: -webkit-fill-available;
+    overflow: scroll;
+}
+
+.namespace{
+    background-color: #fcffd452;
+}
+
+.classe, .interface {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.classe{
+    border: 1px solid #6c3624;
+    background-color: moccasin;
+}
+
+.interface{
+    background-color: paleturquoise;
+    border: 1px dashed darkslateblue;
+}
+
+.classe > .name, .interface > .name{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #6c3624;
+}
+
+.classe button, .interface button{
+    float: right;
+    margin-left: 15px;
+}
+
+.classe > .name{
+    color: sienna;
+}
+
+.constantes, .attributs, .methodes{
+    margin: 5px 0 5px 0;
+}
+
+.constante, .attribut, .methode{
+    height: 25px;
+}
