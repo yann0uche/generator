@@ -3,6 +3,7 @@
  */
 app.controller('NamespaceController', function($scope){
 	$scope.init = function(){
-
+		$scope.$emit('directive-load', 'namespace');
+		$scope.$emit('directive-loaded', 'namespace');
 	}
 });

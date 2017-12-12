@@ -15,7 +15,10 @@
 }
 
 .namespace{
-    background-color: #fcffd452;
+    background-color: #fcffd48a;
+    position: relative;
+    width: fit-content;
+    padding: 20px;
 }
 
 .classe, .interface {

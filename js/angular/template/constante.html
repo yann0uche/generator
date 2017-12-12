@@ -2,10 +2,10 @@
 
     <span class="name" ng-show="editionMode === false">{{ constante.getName() }}</span>
     <span class="value" ng-show="editionMode === false">{{ constante.getValue() }}</span>
-    <button ng-click="edit()" ng-show="editionMode === false">&Eacute;diter</button>
+    <button ng-click="edit($event)" ng-show="editionMode === false">&Eacute;diter</button>
 
     <input type="text" ng-model="constante.name" ng-show="editionMode === true" />
     <input type="text" ng-model="constante.value" ng-show="editionMode === true" />
-    <button ng-click="edit()" ng-show="editionMode === true">Valider</button>
+    <button ng-click="edit($event)" ng-show="editionMode === true">Valider</button>
 
 </div>

@@ -8,7 +8,11 @@ app.controller('MethodeController', function($scope){
 
 	};
 
-	$scope.edit = function(){
+	$scope.edit = function(event){
 		$scope.editionMode = !$scope.editionMode;
+
+		var classe = $(event.target.parentNode.parentNode);
+		classe.height('auto');
+		classe.width('auto');
 	};
 });

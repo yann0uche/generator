@@ -2,8 +2,10 @@
  * Created by Yannouche on 19/11/2017.
  */
 
-app.controller('ApplicationController', function($scope){
+app.controller('ApplicationController',['$scope', '$timeout',function($scope, $timeout){
     $scope.application = null;
+    $scope.nbDirectives = 0;
+
     $scope.init = function(){
         //todo gestion ouverture diagramme depuis serveur (mode collaboratif?)
         //todo gestion ouverture depuis fichier (sauvegarde locale)
@@ -53,5 +55,22 @@ app.controller('ApplicationController', function($scope){
         $scope.application = app;
 
         //fin code de démo
+
+        $scope.$on('directive-load', function(event, data){
+			$scope.nbDirectives++;
+		});
+
+        $timeout(function(){
+			$('.draggable').draggable({
+				grid: [25, 25],
+				containment: "parent",
+				stack: ".draggable"
+			});
+
+			$('.resizable').resizable({
+                containment: 'parent',
+                grid: 25
+            });
+        }, 100);
     }
-});
+}]);
