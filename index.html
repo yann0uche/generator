@@ -12,9 +12,11 @@
         <script src="js/angular/jquery-ui.min.js"></script>
         <script src="js/angular/angular.min.1.6.6.js"></script>
         <script src="js/angular/app.js"></script>
+        <script src="js/angular/service/angular-modal-service.js"></script>
 
-        <!--    outils          -->
-        <script src="js/angular/directive/tools.js"></script>
+        <!--    interface   -->
+        <script src="js/angular/directive/draggable.js"></script>
+        <script src="js/angular/directive/resizable.js"></script>
 
         <!--    application     -->
         <script src="js/angular/classes/application.js"></script>
@@ -48,9 +50,16 @@
         <script src="js/angular/classes/constante.js"></script>
         <script src="js/angular/controller/constante.js"></script>
         <script src="js/angular/directive/constante.js"></script>
+
+        <!--    outils          -->
+        <script src="js/angular/controller/toolbox.js"></script>
+        <script src="js/angular/directive/toolbox.js"></script>
+        <script src="js/angular/tools/diagramme/namespace.tools.js"></script>
+
     </head>
     <body ng-app="generator">
-        <tools></tools>
+        <toolbox></toolbox>
         <application></application>
+        <div id="modal-container"></div>
     </body>
 </html>

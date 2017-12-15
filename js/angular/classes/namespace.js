@@ -123,4 +123,25 @@ function Namespace(name){
 			this.addInterface(interfasse);
 		}
 	};
+
+	this.findClasse = function(name){
+		var i = 0;
+		var found = false;
+		var nbItems = this.classes.length;
+
+		while(i < nbItems && found === false){
+			if(this.classes[i].getName() === className){
+				found = i;
+			}
+
+			i++;
+		}
+
+		if(found === false){
+			//déclencher une exception
+		}
+		else{
+			return this.classes[found];
+		}
+	}
 }

@@ -1,4 +1,6 @@
 <div class="application" ng-controller="ApplicationController" ng-init="init()">
-    <h3>{{ application.getName() }}</h3>
-    <namespace ng-controller="NamespaceController" ng-init="init()" ng-repeat="namespace in application.namespaces"></namespace>
+    <span class="name" ng-click="edit()" ng-show="editionMode === false">{{ application.getName() }}</span>
+    <input ng-show="editionMode === true" ng-model="application.name" type="text" />
+    <button ng-click="edit()" ng-show="editionMode === true">Valider</button>
+    <namespace ng-controller="NamespaceController" ng-init="init()" ng-repeat="namespace in application.namespaces" draggable resizable></namespace>
 </div>

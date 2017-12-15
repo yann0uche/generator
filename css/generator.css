@@ -19,6 +19,7 @@
     position: relative;
     width: fit-content;
     padding: 20px;
+    color: #aaaf5e;
 }
 
 .classe, .interface {
@@ -36,6 +37,16 @@
 .interface{
     background-color: paleturquoise;
     border: 1px dashed darkslateblue;
+}
+
+.namespace > .name, .application > .name{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .classe > .name, .interface > .name{
@@ -62,4 +73,27 @@
 
 .constante, .attribut, .methode{
     height: 25px;
+}
+
+#modal-container .form {
+    padding-top: 10px;
+}
+
+#modal-container label{
+    display: inline-block;
+    width: 100px;
+    float: left;
+}
+
+#modal-container input{
+    display: inline-block;
+    width: 150px;
+    float: right;
+}
+
+#modal-container .buttons{
+    height: 25px;
+    clear: both;
+    padding-top: 15px;
+    float: right;
 }

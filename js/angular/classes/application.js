@@ -65,4 +65,24 @@ function Application(name){
     this.clearNamespaces = function(){
         this.namespaces = [];
     };
+
+    this.findNamespace = function(namespace){
+		var nbNamespaces = this.namespaces.length;
+		var found = false;
+		var i = 0;
+
+		while(i < nbNamespaces && found === false){
+			if(this.namespaces[i].getName() === namespace){
+				found = i;
+			}
+			i++;
+		}
+
+		if(found === false){
+			//déclencher une exception
+		}
+		else{
+			return this.namespaces[found];
+		}
+    }
 }

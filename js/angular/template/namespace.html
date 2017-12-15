@@ -1,5 +1,7 @@
 <div class="namespace draggable resizable">
-    <span class="name">{{ namespace.getName() }}</span>
-    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes" ></classe>
-    <interface ng-controller="InterfaceController" ng-init="init()" ng-repeat="interface in namespace.interfaces"></interface>
+    <span ng-click="edit()" ng-show="editionMode === false" class="name">{{ namespace.getName() }}</span>
+    <input type="text" ng-show="editionMode === true" ng-model="namespace.name">
+    <button ng-click="edit()" ng-show="editionMode === true">Valider</button>
+    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes" draggable resizable></classe>
+    <interface ng-controller="InterfaceController" ng-init="init()" ng-repeat="interface in namespace.interfaces" draggable resizable></interface>
 </div>

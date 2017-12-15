@@ -2,10 +2,10 @@
  * Created by Yannouche on 11/12/2017.
  */
 
-app.directive('tools', function(){
+app.directive('toolbox', function(){
 	return {
 		restrict: 'E',
-		templateUrl: './js/angular/template/tools.html',
+		templateUrl: './js/angular/template/toolbox.html',
 		replace: true
 	};
 });

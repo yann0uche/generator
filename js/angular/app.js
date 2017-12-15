@@ -4,5 +4,5 @@
 
 'use strict';
 
-var app = angular.module('generator', []);
+var app = angular.module('generator', ['angularModalService']);
 
