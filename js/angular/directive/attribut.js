@@ -8,7 +8,8 @@ app.directive('attribut', function (){
 		replace: true,
 		priority: 1001,
 		scope: {
-			attribut: '='
+			attribut: '=',
+			editionMode: '=?'
 		}
 	};
 });

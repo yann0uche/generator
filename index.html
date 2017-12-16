@@ -12,7 +12,6 @@
         <script src="js/angular/jquery-ui.min.js"></script>
         <script src="js/angular/angular.min.1.6.6.js"></script>
         <script src="js/angular/app.js"></script>
-        <script src="js/angular/service/angular-modal-service.js"></script>
 
         <!--    interface   -->
         <script src="js/angular/directive/draggable.js"></script>
@@ -54,12 +53,16 @@
         <!--    outils          -->
         <script src="js/angular/controller/toolbox.js"></script>
         <script src="js/angular/directive/toolbox.js"></script>
+        <script src="js/angular/directive/modal.js"></script>
         <script src="js/angular/tools/diagramme/namespace.tools.js"></script>
+        <script src="js/angular/tools/diagramme/classe.tools.js"></script>
 
     </head>
     <body ng-app="generator">
         <toolbox></toolbox>
         <application></application>
-        <div id="modal-container"></div>
+        <div id="modal-container">
+
+        </div>
     </body>
 </html>

@@ -16,13 +16,12 @@ app.controller('ApplicationController',['$scope', '$timeout',function($scope, $t
 
         //events listeners
         $scope.$on('namespace-add', function(event, data){
-            var namespace = new Namespace(data);
-            $scope.application.addNamespace(namespace);
+            $scope.application.addNamespace(data);
         });
 
         $scope.$on('classe-add', function(event, data){
-            var ns = $scope.application.findNamespace('My\\Namespace');
-            ns.addClasse(new Classe(data));
+            var ns = $scope.application.findNamespace(data.namespaceName);
+            ns.addClasse(data.classe);
         });
 
     };

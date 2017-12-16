@@ -1,0 +1,13 @@
+<div class="classe-modal" ng-controller="ClasseToolsController" ng-init="init()">
+    <div class="form">
+        <label for="txtClasseName">Nom: </label>
+        <input id="txtClasseName" type="text" ng-model="classeName">
+        <label for="lstNamespaces">Namespace</label>
+        <select id="lstNamespaces">
+            <option value="namespace.name" ng-repeat="namespace in namespacesList">{{namespace.name}}</option>
+        </select>
+    </div>
+    <div class="buttons">
+        <button ng-click="addClasse()">Valider</button>
+    </div>
+</div>
