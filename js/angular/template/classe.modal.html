@@ -1,13 +1,37 @@
 <div class="classe-modal" ng-controller="ClasseToolsController" ng-init="init()">
     <div class="form">
-        <label for="txtClasseName">Nom: </label>
-        <input id="txtClasseName" type="text" ng-model="classeName">
-        <label for="lstNamespaces">Namespace</label>
-        <select id="lstNamespaces">
-            <option value="namespace.name" ng-repeat="namespace in namespacesList">{{namespace.name}}</option>
-        </select>
+        <div class="row">
+            <label for="lstNamespaces">Namespace</label>
+            <select id="lstNamespaces" ng-model="selectedNamespace" ng-options="namespace.name for namespace in namespacesList track by namespace.name">
+                <!--<option value="">&#45;&#45; Choisir namespace &#45;&#45;</option>-->
+            </select>
+        </div>
+        <div class="row">
+            <label for="txtClasseName">Nom: </label>
+            <input id="txtClasseName" type="text" ng-model="classe.name">
+        </div>
+        <div class="row">
+            <label for="lstTypes">Type</label>
+            <select name="" id="lstTypes" ng-model="classe.type">
+                <option value="abstract">Abstraite</option>
+                <option value="" selected="selected">Concrète</option>
+                <option value="final">Finale</option>
+            </select>
+        </div>
+        <div class="row" ng-hide="classe.constantes.length === 0" ng-repeat="constante in classe.constantes">
+            <constante ng-controller="ConstanteController" ng-init="init(constante, true)"></constante>
+        </div>
+        <div class="row" ng-hide="classe.attributs.length === 0" ng-repeat="attribut in classe.attributs">
+            <attribut ng-controller="AttributController" ng-init="init(attribut, true)"></attribut>
+        </div>
+        <div class="row" ng-hide="classe.methodes.length === 0" ng-repeat="methode in classe.methodes">
+            <methode ng-controller="MethodeController" ng-init="init(methode, true)"></methode>
+        </div>
     </div>
     <div class="buttons">
+        <button ng-click="addConstante()">Ajouter constante</button>
+        <button ng-click="addAttribut()">Ajouter attribut</button>
+        <button ng-click="addMethode()">Ajouter methode</button>
         <button ng-click="addClasse()">Valider</button>
     </div>
 </div>

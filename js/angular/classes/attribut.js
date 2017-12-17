@@ -4,9 +4,9 @@
 'use strict';
 
 function Attribut(name, type, visibilite){
-    this.name = name;
-    this.type = type;
-    this.visibilite = visibilite;
+    this.name = name || '';
+    this.type = type || '';
+    this.visibilite = visibilite  || 'public';
 
     //accesseurs
 

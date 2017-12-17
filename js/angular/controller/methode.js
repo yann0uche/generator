@@ -2,10 +2,9 @@
  * Created by Yannouche on 19/11/2017.
  */
 app.controller('MethodeController', function($scope){
-	$scope.editionMode = false;
-
-	$scope.init = function(){
-
+	$scope.init = function(methode, editionMode){
+		$scope.methode = methode || new Methode();
+		$scope.editionMode = editionMode || false;
 	};
 
 	$scope.edit = function(event){

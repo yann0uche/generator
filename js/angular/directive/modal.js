@@ -12,6 +12,10 @@ app.directive('modal', ['$templateRequest', '$compile', function($templateReques
 		replace: false,
 		transclude: false,
 		link: function(scope, element, attrs){
+			scope.$on('modal-close', function(){
+				$('#modal-container').data('ui-dialog').close();
+			});
+
 			element.on('click', function(event){
 				event.preventDefault();
 				$templateRequest('./js/angular/template/' + attrs.modalToolName + '.modal.html').then(function(html){
@@ -20,6 +24,8 @@ app.directive('modal', ['$templateRequest', '$compile', function($templateReques
 						modal: true,
 						title: attrs.modalTitle,
 						closeOnEscape: true,
+						height: 'auto',
+						width: 'auto',
 						close: function(){
 							$(this).empty();
 						}

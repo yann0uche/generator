@@ -5,7 +5,7 @@
     <button ng-click="edit($event)" ng-show="editionMode === false">&Eacute;diter</button>
     <select ng-model="attribut.visibilite" ng-show="editionMode === true" ng-options="item for item in ['private', 'protected', 'public']">
     </select>
-    <input type="text" value="{{attribut.getName()}}" ng-model="attribut.name" ng-show="editionMode === true" />
-    <input type="text" value="{{attribut.getType()}}" ng-model="attribut.type" ng-show="editionMode === true" />
+    <input type="text" value="{{attribut.getName()}}" ng-model="attribut.name" ng-show="editionMode === true" placeholder="Nom"/>
+    <input type="text" value="{{attribut.getType()}}" ng-model="attribut.type" ng-show="editionMode === true" placeholder="type"/>
     <button ng-click="edit($event)" ng-show="editionMode === true">Valider</button>
 </div>

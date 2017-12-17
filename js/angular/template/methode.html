@@ -1,11 +1,17 @@
 <div class="methode">
+    <span class="type" ng-show="editionMode === false">{{ methode.type }}</span>
     <span class="visibilite" ng-show="editionMode === false && methode.visibilite !== null">{{ methode.visibilite }}</span>
     <span class="name" ng-show="editionMode === false">{{ methode.name }}</span>:
     <span class="type-retour" ng-show="editionMode === false">{{ methode.typeRetour }}</span>
     <button ng-click="edit($event)" ng-show="editionMode === false">&Eacute;diter</button>
     <select ng-model="methode.visibilite" ng-show="editionMode === true && methode.visibilite !== null" ng-options="item for item in ['private', 'protected', 'public']">
     </select>
-    <input type="text" value="{{ methode.name }}" ng-model="methode.name" ng-show="editionMode === true">
-    <input type="text" value="{{ methode.typeRetour }}" ng-model="methode.typeRetour" ng-show="editionMode === true">
+    <select ng-model="methode.type" ng-show="editionMode === true">
+        <option value="abstract">Abstraite</option>
+        <option value="">Concrète</option>
+        <option value="final">Finale</option>
+    </select>
+    <input type="text" value="{{ methode.name }}" ng-model="methode.name" ng-show="editionMode === true" placeholder="Nom">
+    <input type="text" value="{{ methode.typeRetour }}" ng-model="methode.typeRetour" ng-show="editionMode === true" placeholder="Type de retour">
     <button ng-click="edit($event)" ng-show="editionMode === true">Valider</button>
 </div>

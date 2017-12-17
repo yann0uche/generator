@@ -6,9 +6,6 @@ app.directive('constante', function (){
 		restrict: 'E',
 		templateUrl: './js/angular/template/constante.html',
 		replace: true,
-		priority: 1001,
-		scope: {
-			constante: '='
-		}
+		priority: 1001
 	};
 });

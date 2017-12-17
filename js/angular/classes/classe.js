@@ -15,8 +15,7 @@ function Classe(name){
         'x': 0,
         'y': 0
     };
-	this.abstraite = false;
-	this.finale = false;
+	this.type = '';
 	this.parent = null;
     this.commentaire = '';
 
@@ -36,12 +35,8 @@ function Classe(name){
         return this.position;
     };
 
-    this.getAbstraite = function(){
-        return this.abstraite;
-    };
-
-    this.getFinale = function(){
-        return this.finale;
+    this.getType = function(){
+        return this.type;
     };
 
     this.getParent = function(){
@@ -96,21 +91,12 @@ function Classe(name){
         }
     };
 
-    this.setAbstraite = function(abstraite){
-        if(typeof abstraite !== 'boolean'){
+    this.setType = function(type){
+        if(typeof type !== 'string' || ['abstract', final, ''].indexOf(type) === -1){
 
         }
         else{
-            this.abstraite = abstraite;
-        }
-    };
-
-    this.setFinale = function(finale){
-        if(typeof finale !== 'boolean'){
-
-        }
-        else{
-            this.finale = finale;
+            this.type = type;
         }
     };
 

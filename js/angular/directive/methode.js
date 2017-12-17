@@ -6,9 +6,6 @@ app.directive('methode', function (){
 		restrict: 'E',
 		templateUrl: './js/angular/template/methode.html',
 		replace: true,
-		priority: 1001,
-		scope: {
-			methode: '='
-		}
+		priority: 1001
 	};
 });

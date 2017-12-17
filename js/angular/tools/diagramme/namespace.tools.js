@@ -3,10 +3,10 @@
  */
 
 app.controller('NamespaceToolsController', function($scope){
-	$scope.namespaceName = '';
+	$scope.namespace = new Namespace('');
 
 	$scope.addNamespace = function(){
-		$scope.$emit('namespace-add', new Namespace($scope.namespaceName));
+		$scope.$emit('namespace-add', $scope.namespace);
 		$('#modal-container').data('ui-dialog').close();
 	};
 });

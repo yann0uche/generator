@@ -6,10 +6,6 @@ app.directive('attribut', function (){
 		restrict: 'E',
 		templateUrl: './js/angular/template/attribut.html',
 		replace: true,
-		priority: 1001,
-		scope: {
-			attribut: '=',
-			editionMode: '=?'
-		}
+		priority: 1001
 	};
 });

@@ -4,8 +4,8 @@
     <span class="value" ng-show="editionMode === false">{{ constante.getValue() }}</span>
     <button ng-click="edit($event)" ng-show="editionMode === false">&Eacute;diter</button>
 
-    <input type="text" ng-model="constante.name" ng-show="editionMode === true" />
-    <input type="text" ng-model="constante.value" ng-show="editionMode === true" />
+    <input type="text" ng-model="constante.name" ng-show="editionMode === true"  placeholder="Nom"/>
+    <input type="text" ng-model="constante.value" ng-show="editionMode === true"  placeholder="Valeur"/>
     <button ng-click="edit($event)" ng-show="editionMode === true">Valider</button>
 
 </div>

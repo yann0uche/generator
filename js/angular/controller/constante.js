@@ -2,10 +2,9 @@
  * Created by Yannouche on 19/11/2017.
  */
 app.controller('ConstanteController', function($scope){
-	$scope.editionMode = false;
-
-	$scope.init = function(){
-
+	$scope.init = function(constante, editionMode){
+		$scope.constante = constante || new Constante('', '');
+		$scope.editionMode = editionMode || false;
 	};
 
 	$scope.edit = function(event){

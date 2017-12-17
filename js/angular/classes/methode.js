@@ -3,13 +3,12 @@
  */
 'use strict';
 
-function Methode(name, typeRetour, visibilite, args, isAbstraite, isFinale){
+function Methode(name, typeRetour, visibilite, args, type){
     this.name = name;
 	this.typeRetour = typeRetour || null;
 	this.visibilite = visibilite || null;
     this.args = args || [];
-    this.isAbstraite = isAbstraite || false;
-    this.isFinale = isFinale || false;
+    this.type = type || '';
 
     this.getName = function(){
         return this.name;
@@ -27,29 +26,16 @@ function Methode(name, typeRetour, visibilite, args, isAbstraite, isFinale){
         return this.args;
     };
 
-    this.getIsAbstraite = function(){
-        return this.isAbstraite;
+    this.getType = function(){
+        return this.type;
     };
 
-    this.getIsFinale = function(){
-        return this.isFinale;
-    };
-
-	this.setIsAbstraite = function(isAbstraite){
-		if(typeof isAbstraite !== 'boolean'){
+	this.setType = function(type){
+		if(typeof type !== 'string' || ['abstract', 'final', ''] === -1){
 			//todo gestion erreur
 		}
 		else{
-			this.isAbstraite = isAbstraite;
-		}
-	};
-
-	this.setIsFinale = function(isFinale){
-		if(typeof isFinale !== 'boolean'){
-			//todo gestion erreur
-		}
-		else{
-			this.isFinale = isFinale;
+			this.type = type;
 		}
 	};
 
