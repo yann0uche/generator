@@ -2,10 +2,7 @@
  * Created by Yannouche on 19/11/2017.
  */
 app.controller('AttributController', function($scope){
-	$scope.editionMode = false;
-
-	$scope.init = function(attribut, editionMode){
-		$scope.editionMode = attribut || new Attribut();
+	$scope.init = function(editionMode){
 		$scope.editionMode = editionMode || false;
 	};
 

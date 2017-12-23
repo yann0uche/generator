@@ -1,5 +1,10 @@
 <div class="classe draggable resizable">
-    <span class="name">{{ classe.name }}</span>
+    <div class="name">
+        {{ classe.name }}
+        <span class="classe-tools">
+            <i class="fa fa-cog" aria-hidden="true" modal modal-title="Modifier la classe {{ classe.name }}" modal-tool-name="classe" data="classe"></i>
+        </span>
+    </div>
     <div class="constantes">
         <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in classe.constantes" ></constante>
     </div>

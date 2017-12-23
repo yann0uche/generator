@@ -3,14 +3,21 @@
  */
 app.controller('ClasseToolsController', function($scope){
 	$scope.init = function(classe){
+
+		$scope.edit = classe instanceof Classe;
+
 		$scope.namespacesList = $scope.$parent.$parent.application.namespaces;
 		$scope.selectedNamespace = $scope.namespacesList[0];
 		$scope.classe = classe || new Classe('');
-		console.log($scope.namespacesList);
+
 	};
 
 	$scope.addClasse = function(){
 		$scope.selectedNamespace.addClasse($scope.classe);
+		$scope.$emit('modal-close');
+	};
+
+	$scope.editClasse = function(){
 		$scope.$emit('modal-close');
 	};
 
@@ -24,5 +31,5 @@ app.controller('ClasseToolsController', function($scope){
 
 	$scope.addMethode = function(){
 		$scope.classe.addMethode(new Methode(''))
-	}
+	};
 });

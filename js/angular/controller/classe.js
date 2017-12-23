@@ -3,6 +3,5 @@
  */
 app.controller('ClasseController', function($scope){
 	$scope.init = function(){
-
 	}
 });

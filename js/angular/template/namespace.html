@@ -2,6 +2,6 @@
     <span ng-click="edit()" ng-show="editionMode === false" class="name">{{ namespace.getName() }}</span>
     <input type="text" ng-show="editionMode === true" ng-model="namespace.name">
     <button ng-click="edit()" ng-show="editionMode === true">Valider</button>
-    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes" draggable resizable></classe>
+    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes track by classe.name" draggable resizable></classe>
     <interface ng-controller="InterfaceController" ng-init="init()" ng-repeat="interface in namespace.interfaces" draggable resizable></interface>
 </div>

@@ -7,7 +7,8 @@ app.directive('modal', ['$templateRequest', '$compile', function($templateReques
 		priority: 1,
 		scope: {
 			modalToolName: '@',
-			modalTitle: '@'
+			modalTitle: '@',
+			data: '='
 		},
 		replace: false,
 		transclude: false,

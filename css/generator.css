@@ -91,3 +91,7 @@
 #modal-container .form .row label ~ *{
     float: right;
 }
+
+.name > .classe-tools{
+    float: right;
+}

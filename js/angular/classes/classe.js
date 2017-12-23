@@ -10,7 +10,7 @@ function Classe(name){
 	this.constantes = [];
 	this.interfaces = [];
 
-	this.nom = name;
+	this.name = name;
 	this.position = {
         'x': 0,
         'y': 0
@@ -28,7 +28,7 @@ function Classe(name){
     };
 
     this.getName = function(){
-        return this.nom;
+        return this.name;
     };
 
     this.getPosition = function(){
@@ -60,7 +60,7 @@ function Classe(name){
 
         }
         else{
-            this.nom = nom;
+            this.name = nom;
         }
     };
 

@@ -24,9 +24,24 @@ app.controller('ApplicationController',['$scope', '$timeout',function($scope, $t
             ns.addClasse(data.classe);
         });
 
-    };
 
-    $scope.edit = function(){
+		/**
+         * code de test
+		 */
+
+        var ns = new Namespace('aaaaaaa');
+        var cls= new Classe('MyClass');
+        cls.addAttribut(new Attribut('attribut', 'string', 'public'));
+
+        ns.addClasse(cls);
+        app.addNamespace(ns);
+
+		/**
+         * fin code de test
+		 */
+	};
+
+	$scope.edit = function(){
 		$scope.editionMode = !$scope.editionMode;
 	};
 

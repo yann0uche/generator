@@ -4,11 +4,11 @@
 'use strict';
 
 function Argument(nom, type) {
-    this.nom = nom;
+    this.name = nom;
     this.type = type;
 
     this.getNom = function () {
-        return this.nom;
+        return this.name;
     };
 
     this.getType = function () {
@@ -20,7 +20,7 @@ function Argument(nom, type) {
 
         }
         else {
-            this.nom = nom;
+            this.name = nom;
         }
     };
 

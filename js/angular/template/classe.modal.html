@@ -1,9 +1,8 @@
-<div class="classe-modal" ng-controller="ClasseToolsController" ng-init="init()">
+<div class="classe-modal" ng-controller="ClasseToolsController" ng-init="init(data)">
     <div class="form">
         <div class="row">
             <label for="lstNamespaces">Namespace</label>
-            <select id="lstNamespaces" ng-model="selectedNamespace" ng-options="namespace.name for namespace in namespacesList track by namespace.name">
-                <!--<option value="">&#45;&#45; Choisir namespace &#45;&#45;</option>-->
+            <select id="lstNamespaces" ng-model="selectedNamespace" ng-options="namespace.name for namespace in namespacesList">
             </select>
         </div>
         <div class="row">
@@ -19,19 +18,20 @@
             </select>
         </div>
         <div class="row" ng-hide="classe.constantes.length === 0" ng-repeat="constante in classe.constantes">
-            <constante ng-controller="ConstanteController" ng-init="init(constante, true)"></constante>
+            <constante ng-controller="ConstanteController" ng-init="init(true)"></constante>
         </div>
         <div class="row" ng-hide="classe.attributs.length === 0" ng-repeat="attribut in classe.attributs">
-            <attribut ng-controller="AttributController" ng-init="init(attribut, true)"></attribut>
+            <attribut ng-controller="AttributController" ng-init="init(true)"></attribut>
         </div>
         <div class="row" ng-hide="classe.methodes.length === 0" ng-repeat="methode in classe.methodes">
-            <methode ng-controller="MethodeController" ng-init="init(methode, true)"></methode>
+            <methode ng-controller="MethodeController" ng-init="init(true)"></methode>
         </div>
     </div>
     <div class="buttons">
         <button ng-click="addConstante()">Ajouter constante</button>
         <button ng-click="addAttribut()">Ajouter attribut</button>
         <button ng-click="addMethode()">Ajouter methode</button>
-        <button ng-click="addClasse()">Valider</button>
+        <button ng-click="addClasse()" ng-show="edit === false">Valider</button>
+        <button ng-click="editClasse()" ng-show="edit === true">Valider</button>
     </div>
 </div>
