@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b8adc6-5e6b-40c2-b7da-2e86863dc466" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/angular/directive/collapsible.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/angular/template/interface.modal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/angular/tools/diagramme/interface.tools.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/template/classe.html" afterPath="$PROJECT_DIR$/js/angular/template/classe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/classes/Interface.js" afterPath="$PROJECT_DIR$/js/angular/classes/Interface.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/controller/Interface.js" afterPath="$PROJECT_DIR$/js/angular/controller/Interface.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/directive/collapsible.js" afterPath="$PROJECT_DIR$/js/angular/directive/collapsible.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/template/interface.html" afterPath="$PROJECT_DIR$/js/angular/template/interface.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/template/namespace.html" afterPath="$PROJECT_DIR$/js/angular/template/namespace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/angular/template/toolbox.html" afterPath="$PROJECT_DIR$/js/angular/template/toolbox.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +26,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="classe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/angular/template/classe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="interface.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/angular/template/interface.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="collapsible.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/angular/directive/collapsible.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="408">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -67,6 +92,7 @@
       <find>Namespace</find>
       <find>Abstraite</find>
       <find>isAbstraite</find>
+      <find>Classe</find>
     </findStrings>
     <replaceStrings>
       <replace>attribut</replace>
@@ -78,6 +104,7 @@
       <replace>interfaces</replace>
       <replace>Classe</replace>
       <replace>Type</replace>
+      <replace>Interface</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp64\www\generator</dir>
@@ -89,16 +116,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/angular/classes/Interface.js" />
-        <option value="$PROJECT_DIR$/js/angular/classes/argument.js" />
-        <option value="$PROJECT_DIR$/js/angular/controller/argument.js" />
         <option value="$PROJECT_DIR$/js/angular/template/argument.html" />
         <option value="$PROJECT_DIR$/js/angular/directive/Interface.js" />
         <option value="$PROJECT_DIR$/js/angular/directive/argument.js" />
-        <option value="$PROJECT_DIR$/js/angular/controller/Interface.js" />
         <option value="$PROJECT_DIR$/generator.css" />
         <option value="$PROJECT_DIR$/js/angular/directive/tools.js" />
-        <option value="$PROJECT_DIR$/js/angular/template/interface.html" />
         <option value="$PROJECT_DIR$/js/angular/template/tools.html" />
         <option value="$PROJECT_DIR$/js/angular/directive/toolbox.js" />
         <option value="$PROJECT_DIR$/js/angular/tools/generation/classe.js" />
@@ -113,7 +135,6 @@
         <option value="$PROJECT_DIR$/js/angular/controller/namespace.js" />
         <option value="$PROJECT_DIR$/js/angular/app.js" />
         <option value="$PROJECT_DIR$/js/angular/directive/fancybox.js" />
-        <option value="$PROJECT_DIR$/js/angular/template/toolbox.html" />
         <option value="$PROJECT_DIR$/js/angular/controller/toolbox.js" />
         <option value="$PROJECT_DIR$/js/angular/template/namespace.modal.html" />
         <option value="$PROJECT_DIR$/js/angular/tools/diagramme/namespace.tools.js" />
@@ -136,10 +157,16 @@
         <option value="$PROJECT_DIR$/js/angular/template/application.html" />
         <option value="$PROJECT_DIR$/js/angular/controller/classe.js" />
         <option value="$PROJECT_DIR$/css/generator.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/angular/template/namespace.html" />
-        <option value="$PROJECT_DIR$/js/angular/directive/collapsible.js" />
         <option value="$PROJECT_DIR$/js/angular/template/classe.html" />
+        <option value="$PROJECT_DIR$/js/angular/controller/Interface.js" />
+        <option value="$PROJECT_DIR$/js/angular/template/interface.modal.html" />
+        <option value="$PROJECT_DIR$/js/angular/template/namespace.html" />
+        <option value="$PROJECT_DIR$/js/angular/template/toolbox.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/angular/classes/Interface.js" />
+        <option value="$PROJECT_DIR$/js/angular/tools/diagramme/interface.tools.js" />
+        <option value="$PROJECT_DIR$/js/angular/template/interface.html" />
+        <option value="$PROJECT_DIR$/js/angular/directive/collapsible.js" />
       </list>
     </option>
   </component>
@@ -284,6 +311,50 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -301,19 +372,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\generator\js\angular" />
-      <recent name="C:\wamp64\www\generator\js" />
-      <recent name="C:\wamp64\www\generator\css" />
-      <recent name="C:\wamp64\www\generator\images" />
-      <recent name="C:\wamp64\www\generator\js\angular\template" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\generator\fonts" />
       <recent name="C:\wamp64\www\generator\js" />
       <recent name="C:\wamp64\www\generator\css" />
       <recent name="C:\wamp64\www\generator\js\angular\service" />
       <recent name="C:\wamp64\www\generator\css\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\generator\js\angular\template" />
+      <recent name="C:\wamp64\www\generator\js\angular\tools\diagramme" />
+      <recent name="C:\wamp64\www\generator\js\angular" />
+      <recent name="C:\wamp64\www\generator\js" />
+      <recent name="C:\wamp64\www\generator\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -481,11 +552,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514098079686</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="classe collapsible">
+      <created>1514100130001</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1514100130001</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101732000" />
+    <option name="totallyTimeSpent" value="103235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -547,40 +625,18 @@
     <MESSAGE value="création namespace fonctionnelle" />
     <MESSAGE value="création classe fonctionnelle" />
     <MESSAGE value="edition noms (app, namespace, classe) fonctionnels" />
-    <option name="LAST_COMMIT_MESSAGE" value="edition noms (app, namespace, classe) fonctionnels" />
+    <MESSAGE value="classe collapsible" />
+    <option name="LAST_COMMIT_MESSAGE" value="classe collapsible" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/angular/tools/generation/classe.js" />
-    <entry file="file://$PROJECT_DIR$/js/angular/service/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/template/namespace.tool.html" />
-    <entry file="file://$PROJECT_DIR$/js/angular/classes/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/controller/namespace.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/controller/Interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -652,24 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/classes/namespace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/template/namespace.modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="73" lean-forward="false" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/template/toolbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="71" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -709,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/directive/classe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/directive/constante.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -723,25 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/directive/Interface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/directive/methode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/classes/classe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,6 +799,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,6 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,16 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/angular/tools/diagramme/classe.tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -873,18 +885,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/angular/directive/classe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="20" column="53" lean-forward="false" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/directive/Interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/template/namespace.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="154" lean-forward="false" selection-start-line="8" selection-start-column="154" selection-end-line="8" selection-end-column="154" />
+        <state relative-caret-position="153">
+          <caret line="9" column="145" lean-forward="false" selection-start-line="9" selection-start-column="145" selection-end-line="9" selection-end-column="145" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="61" column="57" lean-forward="false" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -897,18 +925,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/template/toolbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="84" lean-forward="false" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/tools/diagramme/classe.tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/classes/namespace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="77" column="4" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/template/interface.modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/controller/Interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/classes/classe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="313" column="6" lean-forward="true" selection-start-line="269" selection-start-column="4" selection-end-line="313" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/classes/Interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/tools/diagramme/interface.tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/template/classe.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="10" selection-end-column="15" />
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular/template/interface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/angular/directive/collapsible.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+        <state relative-caret-position="408">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>

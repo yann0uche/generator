@@ -23,7 +23,8 @@ app.directive('collapsible', function(){
 				}
 
 				event.preventDefault();
-				$(this).parents('.classe').find('.content').toggle();
+				element.find('.content').toggle();
+				element.height('auto');
 			});
 		}
 	}

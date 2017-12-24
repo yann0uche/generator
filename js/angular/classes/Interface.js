@@ -1,9 +1,10 @@
 /**
  * Created by Yannouche on 08/12/2017.
  */
-var Interface = function(name, methodes){
+var Interface = function(name, methodes, constantes){
 	this.name = name;
 	this.methodes = methodes || [];
+	this.constantes = constantes || [];
 
 	this.getName = function(){
 		return this.name;
@@ -29,11 +30,11 @@ var Interface = function(name, methodes){
 		else{
 			for(var i = 0; i < methodesList.length; i++){
 				this.addMethod(methodesList[i]);
-			};
+			}
 		}
 	};
 
-	this.addMethod = function(method){
+	this.addMethode = function(method){
 		if(!(method instanceof Methode)){
 			//toto gerer erreur
 		}
@@ -64,6 +65,52 @@ var Interface = function(name, methodes){
 			}
 			else{
 				this.methodes.splice(found, 1);
+			}
+		}
+	};
+
+	this.addConstante = function(constante){
+		if(!(constante instanceof Constante)){
+
+		}
+		else{
+			this.constantes.push(constante);
+		}
+	};
+
+	this.removeConstante = function(constante){
+		if(!(constante instanceof Constante)){
+
+		}
+		else{
+			var i = 0;
+			var found = false;
+			var nbItems = this.constantes.length;
+
+			while (i < nbItems && found === false){
+				if(this.constantes[i].getName() === constante.getName()){
+					found = i;
+				}
+
+				i++;
+			}
+
+			if( found === false){
+
+			}
+			else{
+				this.constantes.splice(found, 1);
+			}
+		}
+	};
+
+	this.setConstantes = function(constantesList){
+		if(!(constantesList instanceof Array)){
+			//todo gerer erreur
+		}
+		else{
+			for(var i = 0; i < constantesList.length; i++){
+				this.addConstante(constantesList[i]);
 			}
 		}
 	};
