@@ -4,12 +4,13 @@
 
 app.controller('ApplicationController',['$scope', '$timeout',function($scope, $timeout){
     $scope.application = null;
-    $scope.editionMode = false;
 
-    $scope.init = function(){
+    $scope.init = function(editionMode){
         //todo gestion ouverture diagramme depuis serveur (mode collaboratif?)
         //todo gestion ouverture depuis fichier (sauvegarde locale)
         //todo gestion ouverture diagramme depuis cookie (possible en JS?)
+
+		$scope.editionMode = editionMode || false;
 
         var app = new Application('My super app');
         $scope.application = app;

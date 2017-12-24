@@ -1,6 +1,10 @@
 <div class="classe draggable resizable">
     <div class="name">
+        <span ng-click="edit()" ng-show="editionMode === false">
         {{ classe.name }}
+        </span>
+        <input type="text" ng-model="classe.name" ng-show="editionMode === true">
+        <button ng-show="editionMode === true" ng-click="edit()">Valider</button>
         <span class="classe-tools">
             <i class="fa fa-cog" aria-hidden="true" modal modal-title="Modifier la classe {{ classe.name }}" modal-tool-name="classe" data="classe"></i>
         </span>
