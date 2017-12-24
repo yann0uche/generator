@@ -1,4 +1,4 @@
-<div class="classe draggable resizable">
+<div class="classe">
     <div class="name">
         <span ng-click="edit()" ng-show="editionMode === false">
         {{ classe.name }}
@@ -6,16 +6,19 @@
         <input type="text" ng-model="classe.name" ng-show="editionMode === true">
         <button ng-show="editionMode === true" ng-click="edit()">Valider</button>
         <span class="classe-tools">
+            <i class="fa fa-arrow-down collapser" aria-hidden="true"></i>
             <i class="fa fa-cog" aria-hidden="true" modal modal-title="Modifier la classe {{ classe.name }}" modal-tool-name="classe" data="classe"></i>
         </span>
     </div>
-    <div class="constantes">
-        <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in classe.constantes" ></constante>
-    </div>
-    <div class="attributs">
-        <attribut ng-controller="AttributController" ng-init="init()" ng-repeat="attribut in classe.attributs"></attribut>
-    </div>
-    <div class="methodes">
-        <methode ng-controller="MethodeController" ng-init="init()" ng-repeat="methode in classe.methodes"></methode>
+    <div class="content">
+        <div class="constantes">
+            <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in classe.constantes" ></constante>
+        </div>
+        <div class="attributs">
+            <attribut ng-controller="AttributController" ng-init="init()" ng-repeat="attribut in classe.attributs"></attribut>
+        </div>
+        <div class="methodes">
+            <methode ng-controller="MethodeController" ng-init="init()" ng-repeat="methode in classe.methodes"></methode>
+        </div>
     </div>
 </div>

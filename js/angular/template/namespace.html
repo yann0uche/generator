@@ -6,6 +6,6 @@
         <input type="text" ng-show="editionMode === true" ng-model="namespace.name">
         <button ng-click="edit()" ng-show="editionMode === true">Valider</button>
     </div>
-    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes track by classe.name" draggable resizable></classe>
+    <classe ng-controller="ClasseController" ng-init="init()" ng-repeat="classe in namespace.classes track by classe.name" draggable resizable collapsible></classe>
     <interface ng-controller="InterfaceController" ng-init="init()" ng-repeat="interface in namespace.interfaces" draggable resizable></interface>
 </div>
