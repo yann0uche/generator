@@ -312,4 +312,24 @@ function Classe(name){
 			}
 		}
 	};
+
+	this.load = function(data){
+		var classe = this;
+
+		data.attributs.forEach(function(attr){
+			var attribut = new Attribut(attr.name, attr.type, attr.visibilite);
+			classe.addAttribut(attribut);
+		});
+
+		data.methodes.forEach(function(met){
+			var methode = new Methode(met.name);
+			methode.load(met);
+			classe.addMethode(methode);
+		});
+
+		this.constantes.forEach(function(cons){
+			var constante = new Constante(cons.name, cons.value);
+			classe.addConstante(constante);
+		});
+	}
 }

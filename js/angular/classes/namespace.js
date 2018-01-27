@@ -119,8 +119,7 @@ function Namespace(name){
 
 		}
 		else{
-			var interfasse = new Interface(name);
-			this.addInterface(interfasse);
+			this.addInterface(new Interface(interfasse));
 		}
 	};
 
@@ -130,7 +129,7 @@ function Namespace(name){
 		var nbItems = this.classes.length;
 
 		while(i < nbItems && found === false){
-			if(this.classes[i].getName() === className){
+			if(this.classes[i].getName() === name){
 				found = i;
 			}
 
@@ -143,5 +142,21 @@ function Namespace(name){
 		else{
 			return this.classes[found];
 		}
+	};
+
+	this.load = function(data){
+		var ns = this;
+
+		data.classes.forEach(function(cls){
+			var classe = new Classe(cls.name);
+			classe.load(cls);
+			ns.classes.push(classe);
+		});
+
+		data.interfaces.forEach(function(itf){
+			var interfasse = new Interface(itf.name);
+			interfasse.load(itf);
+			ns.interfaces.push(interfasse);
+		});
 	}
 }

@@ -1,0 +1,20 @@
+<div class="export-modal" ng-controller="ExportToolsController" ng-init="init()">
+    <div class="form">
+        <div class="row">
+            Cookie <input type="radio" name="mode" ng-model="mode" value="cookie">
+            Serveur <input type="radio" name="mode" ng-model="mode" value="server">
+        </div>
+        <div class="row">
+            <input type="text" value="{{ app }}" id="txtClipboard">
+            <button class="btn" data-clipboard-target="#txtClipboard">
+            </button>
+        </div>
+        <div class="row">
+            <input type="text" value="{{cookieName}}">
+        </div>
+    </div>
+    <div class="buttons">
+        <button ng-click="export()">Sauvegarde</button>
+        <button ng-click="close()">Fermer</button>
+    </div>
+</div>

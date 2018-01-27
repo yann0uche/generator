@@ -114,4 +114,19 @@ var Interface = function(name, methodes, constantes){
 			}
 		}
 	};
+
+	this.load = function(data){
+		var itf = this;
+
+		data.methodes.forEach(function(met){
+			var methode = new Methode(met.name);
+			methode.load(met);
+			itf.methodes.push(methode);
+		});
+
+		this.constantes.forEach(function(cons){
+			var constante = new Constante(cons.name, cons.value);
+			itf.constantes.push(constante);
+		});
+	}
 };

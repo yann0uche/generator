@@ -84,5 +84,17 @@ function Application(name){
 		else{
 			return this.namespaces[found];
 		}
-    }
+    };
+
+    this.load = function(data){
+    	var namespaces = [];
+
+    	data.namespaces.forEach(function(ns){
+    		var namespace = new Namespace(ns.name);
+			namespace.load(ns);
+			namespaces.push(namespace);
+		});
+
+    	this.namespaces = namespaces;
+	};
 }

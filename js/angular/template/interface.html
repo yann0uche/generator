@@ -3,7 +3,7 @@
         <span ng-click="edit()" ng-show="editionMode === false">
         {{ interface.name }}
         </span>
-        <input type="text" ng-model="classe.name" ng-show="editionMode === true">
+        <input type="text" ng-model="interface.name" ng-show="editionMode === true">
         <button ng-show="editionMode === true" ng-click="edit()">Valider</button>
         <span class="classe-tools">
             <i class="fa fa-arrow-down collapser" aria-hidden="true"></i>
@@ -11,7 +11,11 @@
         </span>
     </div>
     <div class="content">
-        <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in interface.constantes"></constante>
-        <methode ng-controller="MethodeController" ng-init="init()" ng-repeat="methode in interface.methodes"></methode>
+        <div class="constantes">
+            <constante ng-controller="ConstanteController" ng-init="init()" ng-repeat="constante in interface.constantes"></constante>
+        </div>
+        <div class="methodes">
+            <methode ng-controller="MethodeController" ng-init="init()" ng-repeat="methode in interface.methodes"></methode>
+        </div>
     </div>
 </div>

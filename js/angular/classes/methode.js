@@ -122,4 +122,13 @@ function Methode(name, typeRetour, visibilite, args, type){
     this.clearArgs = function(){
         this.args = [];
     };
+
+    this.load = function(data){
+        var methode = this;
+
+        data.args.forEach(function(arg){
+           var argument = new Argument(arg.name, arg.type);
+           methode.args.push(argument);
+        });
+    }
 }

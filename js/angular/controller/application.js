@@ -2,18 +2,16 @@
  * Created by Yannouche on 19/11/2017.
  */
 
-app.controller('ApplicationController',['$scope', '$timeout',function($scope, $timeout){
+app.controller('ApplicationController', function($scope){
     $scope.application = null;
 
     $scope.init = function(editionMode){
         //todo gestion ouverture diagramme depuis serveur (mode collaboratif?)
         //todo gestion ouverture depuis fichier (sauvegarde locale)
-        //todo gestion ouverture diagramme depuis cookie (possible en JS?)
 
 		$scope.editionMode = editionMode || false;
 
-        var app = new Application('My super app');
-        $scope.application = app;
+        $scope.application = new Application('My super app');
 
         //events listeners
         $scope.$on('namespace-add', function(event, data){
@@ -25,25 +23,17 @@ app.controller('ApplicationController',['$scope', '$timeout',function($scope, $t
             ns.addClasse(data.classe);
         });
 
+        $scope.$on('need-app', function(){
+			$scope.$broadcast('send-app', $scope.application);
+		});
 
-		/**
-         * code de test
-		 */
-
-        var ns = new Namespace('aaaaaaa');
-        var cls= new Classe('MyClass');
-        cls.addAttribut(new Attribut('attribut', 'string', 'public'));
-
-        ns.addClasse(cls);
-        app.addNamespace(ns);
-
-		/**
-         * fin code de test
-		 */
+        $scope.$on('load-app', function(event, data){
+        	$scope.application = data;
+		});
 	};
 
 	$scope.edit = function(){
 		$scope.editionMode = !$scope.editionMode;
 	};
 
-}]);
+});

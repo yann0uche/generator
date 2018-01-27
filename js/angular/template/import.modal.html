@@ -1,0 +1,15 @@
+<div class="import-modal" ng-controller="ImportToolsController" ng-init="init()">
+    <div class="form">
+        <div class="row">
+            <input type="radio" name="rdSauvegardeLocale"> <input type="text" ng-model="app">
+        </div>
+    </div>
+    <div class="row" ng-repeat="locale in savesList.locales">
+        <input type="radio" name="rdSauvegardeLocale" ng-click="changeAppToLoad(locale.value)"> {{locale.name}}
+        <button ng-click="delete($index)">X</button>
+    </div>
+    <div class="buttons">
+        <button ng-click="valid()">Importer</button>
+        <button ng-click="close()">Fermer</button>
+    </div>
+</div>

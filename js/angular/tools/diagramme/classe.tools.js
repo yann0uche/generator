@@ -5,11 +5,14 @@ app.controller('ClasseToolsController', function($scope){
 	$scope.init = function(classe){
 
 		$scope.edit = classe instanceof Classe;
-
 		$scope.namespacesList = $scope.$parent.$parent.application.namespaces;
 		$scope.selectedNamespace = $scope.namespacesList[0];
 		$scope.classe = classe || new Classe('');
+		$scope.classesList = {};
+		$scope.interfacesList = {};
 
+		$scope.loadClassesList();
+		$scope.loadInterfacesList();
 	};
 
 	$scope.addClasse = function(){
@@ -31,5 +34,17 @@ app.controller('ClasseToolsController', function($scope){
 
 	$scope.addMethode = function(){
 		$scope.classe.addMethode(new Methode(''))
+	};
+
+	$scope.loadClassesList = function(){
+		angular.forEach($scope.namespacesList, function(item){
+			$scope.classesList[item.name] = item.classesList;
+		});
+	};
+
+	$scope.loadInterfacesList = function(){
+		angular.forEach($scope.namespacesList, function(item){
+			$scope.interfacesList[item.name] = item.interfacesList;
+		});
 	};
 });

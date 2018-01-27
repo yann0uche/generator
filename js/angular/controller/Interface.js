@@ -8,5 +8,5 @@ app.controller('InterfaceController', function($scope){
 
 	$scope.edit = function(){
 		$scope.editionMode = !$scope.editionMode;
-	}
+	};
 });
